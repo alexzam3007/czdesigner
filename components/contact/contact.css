@@ -1,0 +1,21 @@
+.contact-section {
+    padding: 100px 5%;
+    background-color: var(--text-black);
+    color: var(--text-white);
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-container h2 {
+    margin: 1rem 0;
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 6vw, 4.5rem);
+}
+
+.contact-container p {
+    color: #bbb;
+}

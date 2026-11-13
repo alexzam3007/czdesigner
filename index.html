@@ -3,126 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio | Desarrollador Web</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>CZ Designer | Diseñador gráfico</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Fonts: Archivo Black for headings, Inter for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <div class="logo">MiPortafolio</div>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
+            <a class="logo" href="#home" aria-label="CZ Designer, inicio">
+                <img src="assets/images/CZ-NEGRO-1080x1080.png" alt="CZ Designer">
+            </a>
+            <ul class="nav-links" id="primary-navigation">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre-mi">Acerca de mí</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#contact">Contacto</a></li>
             </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
+            <button class="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="line1"></span>
+                <span class="line2"></span>
+                <span class="line3"></span>
+            </button>
         </nav>
     </header>
 
-    <main>
-        <section id="inicio" class="hero">
-            <div class="hero-content">
-                <h1>Hola, soy <span class="highlight">Tu Nombre</span></h1>
-                <p>Desarrollador Web Full Stack apasionado por crear experiencias digitales increíbles.</p>
-                <a href="#proyectos" class="btn">Ver mi trabajo</a>
-            </div>
-        </section>
-
-        <section id="proyectos" class="projects">
-            <h2>Mis Proyectos</h2>
-            <div class="projects-grid">
-                <!-- Tarjeta de Proyecto 1 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/400x250" alt="Proyecto 1">
-                    </div>
-                    <div class="project-info">
-                        <h3>E-commerce App</h3>
-                        <p>Una plataforma completa de comercio electrónico con pagos integrados.</p>
-                        <div class="tags">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
-                        </div>
-                        <a href="#" class="project-link">Ver más <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <!-- Tarjeta de Proyecto 2 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/400x250" alt="Proyecto 2">
-                    </div>
-                    <div class="project-info">
-                        <h3>Dashboard Analytics</h3>
-                        <p>Panel de control interactivo para visualización de datos en tiempo real.</p>
-                        <div class="tags">
-                            <span>Vue.js</span>
-                            <span>D3.js</span>
-                            <span>Firebase</span>
-                        </div>
-                        <a href="#" class="project-link">Ver más <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <!-- Tarjeta de Proyecto 3 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/400x250" alt="Proyecto 3">
-                    </div>
-                    <div class="project-info">
-                        <h3>Task Manager</h3>
-                        <p>Aplicación de gestión de tareas con enfoque en productividad y UX.</p>
-                        <div class="tags">
-                            <span>TypeScript</span>
-                            <span>Next.js</span>
-                            <span>PostgreSQL</span>
-                        </div>
-                        <a href="#" class="project-link">Ver más <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <main id="main-content">
+        <div data-component="hero"></div>
+        <div data-component="about"></div>
+        <div data-component="projects"></div>
+        <div data-component="contact"></div>
     </main>
 
-    <footer id="contacto">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Contacto</h3>
-                <p>¿Tienes un proyecto en mente? ¡Hablemos!</p>
-                <p>email@ejemplo.com</p>
-            </div>
-            <div class="footer-section">
-                <h3>Redes Sociales</h3>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2023 Tu Nombre. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-
-    <script>
-        // Simple script for mobile menu
-        const burger = document.querySelector('.burger');
-        const nav = document.querySelector('.nav-links');
-        
-        burger.addEventListener('click', () => {
-            nav.classList.toggle('nav-active');
-            burger.classList.toggle('toggle');
-        });
-    </script>
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>
