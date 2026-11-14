@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f2eb">
+    <meta name="description" content="Diseñá tu remera Club House: elegí corte, color, club e ícono de Dino, Bonie o Taco.">
+    <title>Club House | Tienda HDC × CZ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/shop.css">
+    <script src="js/shop-config.local.js"></script>
+    <script type="module" src="js/shop.js"></script>
+</head>
+<body>
+    <svg class="icon-filter-defs" aria-hidden="true" focusable="false">
+        <filter id="icon-color-filter">
+            <feColorMatrix id="icon-color-matrix" type="matrix" values="0.12756 0.42912 0.04332 0 0 0.12756 0.42912 0.04332 0 0 0.12756 0.42912 0.04332 0 0 0 0 0 1 0"></feColorMatrix>
+        </filter>
+    </svg>
+    <header class="shop-header">
+        <a class="back-link" href="index.html">
+            <span aria-hidden="true">←</span> Portfolio
+        </a>
+        <a class="brand-mark" href="shop.html" aria-label="Club House, inicio de la tienda">
+            <img src="assets/images/PAGINA%20WEB/brand/LOGOS.png" alt="HDC × CZ">
+        </a>
+        <a class="header-shop-link" href="#personalizador">Diseñá la tuya <span aria-hidden="true">↘</span></a>
+    </header>
+
+    <main>
+        <section class="shop-hero" aria-labelledby="shop-title">
+            <div class="hero-copy">
+                <p class="eyebrow"><span class="eyebrow-dot"></span> HDC × CZ PRESENTAN</p>
+                <h1 id="shop-title">DINO, BONIE<br>Y TACO.</h1>
+                <p class="hero-subtitle">CLUB HOUSE</p>
+                <p class="hero-description">Tu club. Tu corte. Tu remera. Armala a tu manera.</p>
+                <a class="hero-cta" href="#personalizador">Crear mi remera <span aria-hidden="true">↓</span></a>
+                <p class="hero-price">Una prenda, infinitas formas de ser parte.</p>
+            </div>
+            <div class="hero-art">
+                <span class="hero-sticker" aria-hidden="true">DROP<br>01</span>
+                <img src="assets/images/PAGINA%20WEB/characters/illustrations/Gemini_Generated_Image_nbptk2nbptk2nbpt%20(2).png" alt="Dino, Bonie y Taco reunidos en el Club House">
+                <img class="capsule-logo" src="assets/images/PAGINA%20WEB/capsule/LOGO.png" alt="Dino, Bonie y Taco — Club House">
+            </div>
+        </section>
+
+        <section class="customizer-section" id="personalizador" aria-labelledby="customizer-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">CATÁLOGO DE PERSONALIZACIÓN</p>
+                    <h2 id="customizer-title">Diseñá tu prenda</h2>
+                </div>
+                <p class="price-tag">$60.000 <span>ARS</span></p>
+            </div>
+
+            <div class="customizer">
+                <div class="product-preview" aria-label="Vista previa de tu remera">
+                    <div class="preview-topline">
+                        <span class="preview-label">VISTA PREVIA · 2D</span>
+                        <span class="preview-price">$60.000 ARS</span>
+                    </div>
+                    <div class="shirt-stage" id="shirt-stage">
+                        <canvas id="shirt-canvas" width="1080" height="1080" role="img" aria-label="Remera personalizada vista de frente"></canvas>
+                        <div class="shirt-stamp" id="shirt-stamp" aria-hidden="true">
+                            <span class="stamp-accent"></span>
+                            <img class="stamp-image" id="stamp-image" src="assets/images/PAGINA%20WEB/clubs/CLUB%20-%20OJITOS.png" alt="">
+                        </div>
+                        <div class="shirt-back-stamp" id="shirt-back-stamp" aria-hidden="true">
+                            <span class="stamp-accent"></span>
+                            <img class="stamp-image" id="back-stamp-image" src="assets/images/PAGINA%20WEB/clubs/CLUB%20-%20OJITOS.png" alt="">
+                        </div>
+                        <img class="sleeve-icon" id="sleeve-icon" src="assets/images/PAGINA%20WEB/characters/icons/DINO.LAT.png" alt="">
+                        <model-viewer
+                            class="shirt-model"
+                            id="shirt-model"
+                            camera-controls
+                            camera-orbit="0deg 75deg 105%"
+                            min-camera-orbit="auto 30deg auto"
+                            max-camera-orbit="auto 150deg auto"
+                            interaction-prompt="none"
+                            shadow-intensity="0.7"
+                            exposure="0.65"
+                            alt="Remera Club House personalizada en vista 3D, arrastrá para girarla">
+                            <div
+                                class="model-hotspot model-hotspot-chest"
+                                id="model-stamp"
+                                slot="hotspot-chest"
+                                data-position="0.09m 0.12m 0.12m"
+                                data-normal="0m 0m 1m"
+                                data-visibility-attribute="visible"
+                                aria-hidden="true">
+                                <span class="stamp-accent"></span>
+                                <img class="stamp-image" id="model-stamp-image" alt="">
+                            </div>
+                            <div
+                                class="model-hotspot model-hotspot-chest"
+                                id="model-back-stamp"
+                                slot="hotspot-back-chest"
+                                data-position="0m 0.12m -0.12m"
+                                data-normal="0m 0m -1m"
+                                data-visibility-attribute="visible"
+                                aria-hidden="true">
+                                <span class="stamp-accent"></span>
+                                <img class="stamp-image" id="model-back-stamp-image" alt="">
+                            </div>
+                            <div
+                                class="model-hotspot model-hotspot-sleeve"
+                                id="model-sleeve-hotspot"
+                                slot="hotspot-sleeve"
+                                data-position="-0.25m 0.11m 0.012m"
+                                data-normal="-1m 0m 0m"
+                                data-visibility-attribute="visible"
+                                aria-hidden="true">
+                                <img id="model-sleeve-icon" src="assets/images/PAGINA%20WEB/characters/icons/DINO.LAT.png" alt="">
+                            </div>
+                        </model-viewer>
+                        <span class="preview-side-label" id="preview-side-label">FRENTE</span>
+                    </div>
+                    <div class="preview-controls" aria-label="Elegir vista de la remera">
+                        <button class="view-button is-selected" type="button" data-view="front" aria-pressed="true">Frente</button>
+                        <button class="view-button" type="button" data-view="back" aria-pressed="false">Espalda</button>
+                        <button class="view-button" type="button" data-view="3d" aria-pressed="false">360°</button>
+                    </div>
+                    <p class="preview-note" id="preview-note">El color puede variar levemente entre 2D y 3D por la iluminación. El diseño se aplica a la prenda seleccionada.</p>
+                    <p class="field-error model-error" id="model-error" role="alert" hidden></p>
+                </div>
+
+                <form class="customizer-form" id="order-form">
+                    <div class="step-navigation" role="tablist" aria-label="Pasos para personalizar tu remera">
+                        <button class="step-tab is-active" id="tab-fit" type="button" role="tab" aria-selected="true" aria-controls="panel-fit" data-step="fit">
+                            <span>01</span> Corte y color
+                        </button>
+                        <button class="step-tab" id="tab-club" type="button" role="tab" aria-selected="false" aria-controls="panel-club" data-step="club">
+                            <span>02</span> Tu club
+                        </button>
+                        <button class="step-tab" id="tab-details" type="button" role="tab" aria-selected="false" aria-controls="panel-details" data-step="details">
+                            <span>03</span> Detalles
+                        </button>
+                    </div>
+
+                    <section class="step-panel" id="panel-fit" role="tabpanel" aria-labelledby="tab-fit" data-panel="fit">
+                        <div class="panel-intro">
+                            <p class="eyebrow">PASO 01 · LA BASE</p>
+                            <h3>Elegí tu corte y color</h3>
+                        </div>
+
+                        <fieldset class="option-group">
+                            <legend>Talle <span>· 10 unidades informativas por talle</span></legend>
+                            <div class="size-options" id="size-options">
+                                <button class="size-option" type="button" data-size="S" aria-pressed="false">S</button>
+                                <button class="size-option is-selected" type="button" data-size="M" aria-pressed="true">M</button>
+                                <button class="size-option" type="button" data-size="L" aria-pressed="false">L</button>
+                                <button class="size-option" type="button" data-size="XL" aria-pressed="false">XL</button>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="option-group">
+                            <legend>Modelo</legend>
+                            <div class="fit-options">
+                                <button class="fit-option is-selected" type="button" data-fit="regular" aria-pressed="true">
+                                    <img src="assets/images/PAGINA%20WEB/shirts/reference/REMERA%20-%20BASICA.png" alt="">
+                                    <span>Regular</span>
+                                </button>
+                                <button class="fit-option" type="button" data-fit="oversize" aria-pressed="false">
+                                    <img src="assets/images/PAGINA%20WEB/shirts/reference/REMERA%20-%20OVERSIZE.png" alt="">
+                                    <span>Oversize</span>
+                                </button>
+                                <button class="fit-option" type="button" data-fit="boxy" aria-pressed="false">
+                                    <img src="assets/images/PAGINA%20WEB/shirts/reference/REMERA%20-%20BOXI.png" alt="">
+                                    <span>Boxy</span>
+                                </button>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="option-group">
+                            <legend>Color de la remera <span id="garment-color-name">· Blanco</span></legend>
+                            <div class="swatch-list garment-swatches" id="garment-swatches" aria-label="Color de la remera">
+                                <button class="color-swatch" type="button" data-color="#111111" data-name="Negro" aria-label="Negro" aria-pressed="false"></button>
+                                <button class="color-swatch" type="button" data-color="#373a32" data-name="Verde oliva" aria-label="Verde oliva" aria-pressed="false"></button>
+                                <button class="color-swatch" type="button" data-color="#702a40" data-name="Bordó" aria-label="Bordó" aria-pressed="false"></button>
+                                <button class="color-swatch" type="button" data-color="#343b4a" data-name="Azul noche" aria-label="Azul noche" aria-pressed="false"></button>
+                                <button class="color-swatch" type="button" data-color="#d5c9b5" data-name="Arena" aria-label="Arena" aria-pressed="false"></button>
+                                <button class="color-swatch" type="button" data-color="#999999" data-name="Gris" aria-label="Gris" aria-pressed="false"></button>
+                                <button class="color-swatch" type="button" data-color="#bdcbdc" data-name="Celeste" aria-label="Celeste" aria-pressed="false"></button>
+                                <button class="color-swatch" type="button" data-color="#ead9ef" data-name="Lavanda" aria-label="Lavanda" aria-pressed="false"></button>
+                                <button class="color-swatch is-selected" type="button" data-color="#f8f8f6" data-name="Blanco" aria-label="Blanco" aria-pressed="true"></button>
+                            </div>
+                        </fieldset>
+
+                        <div class="stock-note"><span aria-hidden="true">✳</span> Disponibilidad a confirmar al recibir tu pedido.</div>
+                        <button class="primary-button next-step" type="button" data-next="club">Elegir mi club <span aria-hidden="true">→</span></button>
+                    </section>
+
+                    <section class="step-panel" id="panel-club" role="tabpanel" aria-labelledby="tab-club" data-panel="club" hidden>
+                        <div class="panel-intro">
+                            <p class="eyebrow">PASO 02 · TU IDENTIDAD</p>
+                            <h3>Elegí tu club</h3>
+                            <p>Un logo al pecho y también en la espalda, más el ícono de tu personaje en la manga.</p>
+                        </div>
+
+                        <fieldset class="option-group">
+                            <legend>Club</legend>
+                            <div class="club-options">
+                                <button class="club-option is-selected" type="button" data-club="ojitos" aria-pressed="true">
+                                    <img src="assets/images/PAGINA%20WEB/clubs/CLUB%20-%20OJITOS.png" alt="">
+                                    <span>Club de los ojitos<br>semi-cerrados</span>
+                                </button>
+                                <button class="club-option" type="button" data-club="malas-ideas" aria-pressed="false">
+                                    <img src="assets/images/PAGINA%20WEB/clubs/CLUB%20-%20MALAS%20IDEAS.png" alt="">
+                                    <span>Club de las buenas<br>malas ideas</span>
+                                </button>
+                                <button class="club-option" type="button" data-club="asuntos-ajenos" aria-pressed="false">
+                                    <img src="assets/images/PAGINA%20WEB/clubs/CLUB%20-%20ASUNTOS%20AJENOS.png" alt="">
+                                    <span>Club de asuntos<br>ajenos</span>
+                                </button>
+                                <button class="club-option custom-club-option" type="button" data-club="custom" aria-pressed="false">
+                                    <span class="upload-mark" aria-hidden="true">＋</span>
+                                    <span>Personalizado<br><small>Subí tu foto</small></span>
+                                </button>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="option-group">
+                            <legend>Color del detalle del club <span id="club-detail-color-name">· Naranja</span></legend>
+                            <div class="swatch-list club-detail-swatches" id="club-detail-swatches" aria-label="Color del detalle del club">
+                                <button class="color-swatch is-selected" type="button" data-color="#ec4d36" data-name="Naranja" aria-label="Naranja" aria-pressed="true"></button>
+                                <button class="color-swatch" type="button" data-color="#111111" data-name="Negro" aria-label="Negro" aria-pressed="false"></button>
+                                <button class="color-swatch" type="button" data-color="#e6d5bd" data-name="Arena" aria-label="Arena" aria-pressed="false"></button>
+                                <button class="color-swatch" type="button" data-color="#d6b523" data-name="Amarillo" aria-label="Amarillo" aria-pressed="false"></button>
+                                <button class="color-swatch" type="button" data-color="#aeca5c" data-name="Lima" aria-label="Lima" aria-pressed="false"></button>
+                                <button class="color-swatch" type="button" data-color="#319be0" data-name="Azul" aria-label="Azul" aria-pressed="false"></button>
+                                <button class="color-swatch" type="button" data-color="#ead9ef" data-name="Lavanda" aria-label="Lavanda" aria-pressed="false"></button>
+                                <button class="color-swatch" type="button" data-color="#a88be1" data-name="Violeta" aria-label="Violeta" aria-pressed="false"></button>
+                                <button class="color-swatch" type="button" data-color="#888888" data-name="Gris" aria-label="Gris" aria-pressed="false"></button>
+                            </div>
+                        </fieldset>
+
+                        <div class="upload-field" id="upload-field" hidden>
+                            <label for="custom-image">Tu imagen de referencia</label>
+                            <input id="custom-image" name="custom-image" type="file" accept="image/png,image/jpeg,image/webp">
+                            <p class="field-help">JPG, PNG o WebP · hasta 8 MB. Se verá en la vista previa de esta página.</p>
+                            <p class="field-error" id="upload-error" role="alert" hidden></p>
+                        </div>
+
+                        <fieldset class="option-group">
+                            <legend>Ícono lateral</legend>
+                            <div class="icon-options">
+                                <button class="icon-option is-selected" type="button" data-icon="dino" aria-pressed="true">
+                                    <img src="assets/images/PAGINA%20WEB/characters/icons/DINO.LAT.png" alt="">
+                                    <span>Dino</span>
+                                </button>
+                                <button class="icon-option" type="button" data-icon="bonie" aria-pressed="false">
+                                    <img src="assets/images/PAGINA%20WEB/characters/icons/BONIE-LAT.png" alt="">
+                                    <span>Bonie</span>
+                                </button>
+                                <button class="icon-option" type="button" data-icon="taco" aria-pressed="false">
+                                    <img src="assets/images/PAGINA%20WEB/characters/icons/TACO-LAT.png" alt="">
+                                    <span>Taco</span>
+                                </button>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="option-group">
+                            <legend>Color del ícono lateral <span id="icon-color-name">· Naranja</span></legend>
+                            <div class="swatch-list icon-color-swatches" id="icon-color-swatches" aria-label="Color del ícono lateral">
+                                <button class="color-swatch is-selected" type="button" data-color="#ec4d36" data-name="Naranja" aria-label="Naranja" aria-pressed="true"></button>
+                                <button class="color-swatch" type="button" data-color="#111111" data-name="Negro" aria-label="Negro" aria-pressed="false"></button>
+                                <button class="color-swatch" type="button" data-color="#e6d5bd" data-name="Arena" aria-label="Arena" aria-pressed="false"></button>
+                                <button class="color-swatch" type="button" data-color="#d6b523" data-name="Amarillo" aria-label="Amarillo" aria-pressed="false"></button>
+                                <button class="color-swatch" type="button" data-color="#aeca5c" data-name="Lima" aria-label="Lima" aria-pressed="false"></button>
+                                <button class="color-swatch" type="button" data-color="#319be0" data-name="Azul" aria-label="Azul" aria-pressed="false"></button>
+                                <button class="color-swatch" type="button" data-color="#ead9ef" data-name="Lavanda" aria-label="Lavanda" aria-pressed="false"></button>
+                                <button class="color-swatch" type="button" data-color="#a88be1" data-name="Violeta" aria-label="Violeta" aria-pressed="false"></button>
+                                <button class="color-swatch" type="button" data-color="#888888" data-name="Gris" aria-label="Gris" aria-pressed="false"></button>
+                            </div>
+                        </fieldset>
+
+                        <div class="step-actions">
+                            <button class="text-button previous-step" type="button" data-previous="fit">← Volver</button>
+                            <button class="primary-button next-step" type="button" data-next="details">Continuar <span aria-hidden="true">→</span></button>
+                        </div>
+                    </section>
+
+                    <section class="step-panel" id="panel-details" role="tabpanel" aria-labelledby="tab-details" data-panel="details" hidden>
+                        <div class="panel-intro">
+                            <p class="eyebrow">PASO 03 · TU PEDIDO</p>
+                            <h3>¿A dónde te la enviamos?</h3>
+                            <p>Completá tus datos. Confirmamos disponibilidad y envío por WhatsApp.</p>
+                        </div>
+
+                        <div class="order-summary" id="order-summary" aria-live="polite">
+                            <span class="summary-label">TU DISEÑO</span>
+                            <p id="summary-design">Remera Regular · talle M · Blanco</p>
+                            <p id="summary-club">Club de los ojitos semi-cerrados · detalle naranja · Dino · ícono naranja</p>
+                            <strong>$60.000 ARS</strong>
+                        </div>
+
+                        <div class="form-grid">
+                            <label class="form-field" for="customer-name">
+                                <span>Nombre y apellido *</span>
+                                <input id="customer-name" name="customer-name" autocomplete="name" required>
+                            </label>
+                            <label class="form-field" for="customer-phone">
+                                <span>Tu WhatsApp *</span>
+                                <input id="customer-phone" name="customer-phone" type="tel" autocomplete="tel" placeholder="Ej. 11 1234 5678" required>
+                            </label>
+                            <label class="form-field form-field-wide" for="customer-email">
+                                <span>Email <small>opcional</small></span>
+                                <input id="customer-email" name="customer-email" type="email" autocomplete="email">
+                            </label>
+                            <label class="form-field form-field-wide" for="customer-address">
+                                <span>Dirección y número *</span>
+                                <input id="customer-address" name="customer-address" autocomplete="street-address" placeholder="Calle, altura, piso y depto." required>
+                            </label>
+                            <label class="form-field" for="customer-city">
+                                <span>Ciudad *</span>
+                                <input id="customer-city" name="customer-city" autocomplete="address-level2" required>
+                            </label>
+                            <label class="form-field" for="customer-province">
+                                <span>Provincia *</span>
+                                <input id="customer-province" name="customer-province" autocomplete="address-level1" required>
+                            </label>
+                            <label class="form-field" for="customer-postal">
+                                <span>Código postal *</span>
+                                <input id="customer-postal" name="customer-postal" autocomplete="postal-code" required>
+                            </label>
+                            <label class="form-field" for="customer-notes">
+                                <span>Indicaciones <small>opcional</small></span>
+                                <input id="customer-notes" name="customer-notes" placeholder="Referencias para encontrar tu dirección">
+                            </label>
+                        </div>
+
+                        <label class="privacy-check">
+                            <input id="privacy-consent" name="privacy-consent" type="checkbox" required>
+                            <span>Autorizo usar estos datos únicamente para coordinar este pedido. *</span>
+                        </label>
+
+                        <p class="shipping-note">El envío y el pago se coordinan por WhatsApp. La tienda no procesa pagos ni guarda pedidos todavía.</p>
+                        <p class="field-error" id="form-error" role="alert" hidden></p>
+                        <div class="step-actions final-actions">
+                            <button class="text-button previous-step" type="button" data-previous="club">← Volver a personalizar</button>
+                            <button class="primary-button submit-order" type="submit">Pedir por WhatsApp <span aria-hidden="true">↗</span></button>
+                        </div>
+                        <div class="whatsapp-result" id="whatsapp-result" aria-live="polite" hidden>
+                            <p>Tu pedido está listo. Abrí WhatsApp y, si elegiste una foto personalizada, adjuntala al chat antes de enviarlo.</p>
+                            <a class="primary-button whatsapp-link" id="whatsapp-link" href="#" target="_blank" rel="noopener noreferrer">Abrir WhatsApp <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </section>
+                </form>
+            </div>
+            <p class="stock-disclaimer">La disponibilidad publicada es orientativa (10 unidades por talle); se confirma manualmente al recibir el pedido.</p>
+        </section>
+
+        <section class="club-story" aria-labelledby="story-title">
+            <div class="story-image">
+                <img src="assets/images/PAGINA%20WEB/characters/illustrations/Gemini_Generated_Image_uywekhuywekhuywe.png" alt="Dino, Bonie y Taco en una aventura de Club House" loading="lazy">
+            </div>
+            <div class="story-copy">
+                <p class="eyebrow">AMIGOS, IDEAS Y ASUNTOS AJENOS</p>
+                <h2 id="story-title">No hace falta<br>pedir permiso<br>para ser del club.</h2>
+                <p>Dino, Bonie y Taco te invitan a elegir tu insignia y llevar un pedacito del Club House con vos.</p>
+                <a href="#personalizador">Encontrá tu club <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="shop-footer">
+        <img src="assets/images/PAGINA%20WEB/brand/LOGOS.png" alt="HDC × CZ" loading="lazy">
+        <p>CLUB HOUSE · UNA CÁPSULA HDC × CZ</p>
+        <a href="index.html">Volver a CZ Designer</a>
+    </footer>
+</body>
+</html>
